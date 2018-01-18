@@ -1,0 +1,9 @@
+concept,concept_type
+year,time
+gov,entity_domain
+illiteracy,measure
+average_household_size,measure
+name,string
+rate,measure
+pop,measure
+region,entity_domain

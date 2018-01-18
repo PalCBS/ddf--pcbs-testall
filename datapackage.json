@@ -1,0 +1,207 @@
+{
+  "name": "Data sets",
+  "title": "Data sets",
+  "description": "",
+  "version": "0.0.1",
+  "language": {
+    "id": "en",
+    "name": "English"
+  },
+  "translations": [],
+  "license": "",
+  "author": "",
+  "resources": [
+    {
+      "path": "ddf--concepts.csv",
+      "name": "ddf--concepts",
+      "schema": {
+        "fields": [
+          {
+            "name": "concept"
+          },
+          {
+            "name": "concept_type"
+          }
+        ],
+        "primaryKey": "concept"
+      }
+    },
+    {
+      "path": "ddf--datapoints--average_household_size--by--gov--year.csv",
+      "name": "average_household_size--by--gov--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "gov"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "average_household_size"
+          }
+        ],
+        "primaryKey": [
+          "gov",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--illiteracy--by--gov--year.csv",
+      "name": "illiteracy--by--gov--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "gov"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "illiteracy"
+          }
+        ],
+        "primaryKey": [
+          "gov",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--pop--by--gov--year.csv",
+      "name": "pop--by--gov--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "gov"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "pop"
+          }
+        ],
+        "primaryKey": [
+          "gov",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--datapoints--rate--by--gov--year.csv",
+      "name": "rate--by--gov--year",
+      "schema": {
+        "fields": [
+          {
+            "name": "gov"
+          },
+          {
+            "name": "year"
+          },
+          {
+            "name": "rate"
+          }
+        ],
+        "primaryKey": [
+          "gov",
+          "year"
+        ]
+      }
+    },
+    {
+      "path": "ddf--entities--gov.csv",
+      "name": "gov",
+      "schema": {
+        "fields": [
+          {
+            "name": "gov"
+          },
+          {
+            "name": "name"
+          },
+          {
+            "name": "region"
+          }
+        ],
+        "primaryKey": "gov"
+      }
+    }
+  ],
+  "ddfSchema": {
+    "datapoints": [
+      {
+        "primaryKey": [
+          "gov",
+          "year"
+        ],
+        "value": "average_household_size",
+        "resources": [
+          "average_household_size--by--gov--year"
+        ]
+      },
+      {
+        "primaryKey": [
+          "gov",
+          "year"
+        ],
+        "value": "illiteracy",
+        "resources": [
+          "illiteracy--by--gov--year"
+        ]
+      },
+      {
+        "primaryKey": [
+          "gov",
+          "year"
+        ],
+        "value": "pop",
+        "resources": [
+          "pop--by--gov--year"
+        ]
+      },
+      {
+        "primaryKey": [
+          "gov",
+          "year"
+        ],
+        "value": "rate",
+        "resources": [
+          "rate--by--gov--year"
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "primaryKey": [
+          "gov"
+        ],
+        "value": "name",
+        "resources": [
+          "gov"
+        ]
+      },
+      {
+        "primaryKey": [
+          "gov"
+        ],
+        "value": "region",
+        "resources": [
+          "gov"
+        ]
+      }
+    ],
+    "concepts": [
+      {
+        "primaryKey": [
+          "concept"
+        ],
+        "value": "concept_type",
+        "resources": [
+          "ddf--concepts"
+        ]
+      }
+    ]
+  }
+}
